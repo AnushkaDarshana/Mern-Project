@@ -7,7 +7,7 @@ const UserProvider = ({ children }) => {
   const [error, setError] = useState('');
 
   const login = (username, password) => {
-    if (username === 'JohnDoe' && password === 'password123') {
+    if (username === 'admin' && password === '123') {
       setUser({ name: 'John Doe', email: 'john.doe@example.com' });
       setError('');
     } else {
