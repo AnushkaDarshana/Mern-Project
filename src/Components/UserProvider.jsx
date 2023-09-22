@@ -10,8 +10,10 @@ const UserProvider = ({ children }) => {
     if (username === 'admin' && password === '123') {
       setUser({ name: 'John Doe', email: 'john.doe@example.com' });
       setError('');
+      return true; // return true if login is successful
     } else {
       setError('Username or password is incorrect');
+      return false; // return false if login fails
     }
   };
   const logout = () => setUser(null);

@@ -14,13 +14,29 @@ import Objects from './Components/Objects';
 import UserProvider from './Components/UserProvider';
 import UserProfile from './Components/UserProfile';
 import Login from './Components/Login';
-import Counter from './Components/UseReducer';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Navigation from './Components/Navigation';
+import Users from './Components/Users';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
   return (
     <UserProvider>
-      <Login />
-      <UserProfile />
+      <Router>
+        <Navigation /> 
+        <Routes>
+          <Route path="/" element={<Login />} />
+          {/* <Route path="/profile" element={<UserProfile />} /> */}
+          <Route path="/profile/*" element={<UserProfile />} />
+          <Route path="/users/*" element={<Users />} />
+          {/* <Route path="/users/*" element={
+            <ProtectedRoute>
+              <Users />
+            </ProtectedRoute>} 
+          /> */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </UserProvider>
   );
 }
