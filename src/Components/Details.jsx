@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function New() {
+export default function Details() {
   return (
     <div>
-      <p>Hey, Im anushka</p>
+      <h3>User Details</h3>
     </div>
   )
 }

@@ -1,4 +1,5 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useContext } from 'react'; // Correct import statement
+import { UserContext } from './UserProvider';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -15,7 +16,11 @@ const initialState = { count: 0 };
 
 const Counter = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { user } = useContext(UserContext); // Moved useContext inside functional component
+  
+  if (!user) return <p>Please login to see the counter.</p>;
 
+  
   return (
     <div>
       <p>Count: {state.count}</p>
@@ -26,9 +31,3 @@ const Counter = () => {
 };
 
 export default Counter;
-
-
-{/* <div className="App">
-      <h1>Counter Example</h1>
-      <Counter /> 
-</div> */}

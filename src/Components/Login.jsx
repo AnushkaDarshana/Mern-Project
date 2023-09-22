@@ -1,16 +1,22 @@
-import React, { useContext, useState  } from 'react';
+import React, { useContext, useState } from 'react';
 import { UserContext } from './UserProvider';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 
 export default function Login() {
-
   const { login, error } = useContext(UserContext);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(username, password);
+    const loggedIn = login(username, password); // login function will now return true or false
+    if (loggedIn) {
+      navigate('/profile'); // Navigate to UserProfile route after successful login
+    }
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -26,5 +32,5 @@ export default function Login() {
       </form>
       {error && <p>{error}</p>}
     </div>
-  )
+  );
 }
