@@ -1,10 +1,6 @@
 import './App.css';
 import TextChanger from './Components/TextChanger';
-import Component2 from './Components/Component2';
-import New from './Components/New';
-import State from './Components/State';
-import Change from './Components/change';
-import Change2 from './Components/change2';
+import UseState from './Components/UseState';
 import Props from './Components/Props';
 import EventHandler from './Components/EventHandler';
 import FormEvents from './Components/FormEvents';
