@@ -4,12 +4,20 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [error, setError] = useState('');
 
-  const login = (user) => setUser(user);
+  const login = (username, password) => {
+    if (username === 'JohnDoe' && password === 'password123') {
+      setUser({ name: 'John Doe', email: 'john.doe@example.com' });
+      setError('');
+    } else {
+      setError('Username or password is incorrect');
+    }
+  };
   const logout = () => setUser(null);
   
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, error, login, logout }}>
       {children}
     </UserContext.Provider>
   );
