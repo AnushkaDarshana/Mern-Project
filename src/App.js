@@ -14,6 +14,7 @@ import Objects from './Components/Objects';
 import UserProvider from './Components/UserProvider';
 import UserProfile from './Components/UserProfile';
 import Login from './Components/Login';
+import Counter from './Components/UseReducer';
 
 function App() {
   return (
