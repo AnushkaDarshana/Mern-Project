@@ -15,10 +15,16 @@ export default function FormEvents() {
     setInputValue(e.target.value); // Sets the state with the input value.
   };
 
+  const handleReset = () => {
+    setInputValue('');
+    setSelectValue('');
+    setTextareaValue('');
+  };
+
   return (
     <div style={{ padding: '20px' }}>
 
-      <form onSubmit={handleSubmit} onReset={(e) => { e.stopPropagation(); alert('Form Reset'); }}>
+      <form onSubmit={handleSubmit} onReset={handleReset}>
       
         <input
           type="text"
