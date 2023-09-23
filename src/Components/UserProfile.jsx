@@ -22,11 +22,11 @@ function UserProfile() {
       <p>Email: {user.email}</p>
       <button onClick={logout}>Logout</button> {/* Use handleLogout function here */}
       
-      <NavLink to="details">Go to Details</NavLink> 
+      {/* <NavLink to="details">Go to Details</NavLink> 
 
       <Routes>
         <Route path="details" element={<Details />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

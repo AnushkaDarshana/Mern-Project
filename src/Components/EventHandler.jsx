@@ -13,8 +13,8 @@ export default function EventHandler() {
       </button>
 
       <div
-       onMouseDown={() => alert('Mouse Down!')}
-        // onMouseUp={() => alert('Mouse Up!')}
+       //onMouseDown={() => alert('Mouse Down!')}
+      //  onMouseUp={() => alert('Mouse Up!')}
         style={{ marginTop: '20px', padding: '30px', border: '1px solid black' }}
       >
         Mouse Down & Up here
@@ -28,8 +28,8 @@ export default function EventHandler() {
       </div>
 
       <div
-        // onMouseOver={() => alert('Mouse Over!')}
-      //  onMouseOut={() => alert('Mouse Out!')}
+       // onMouseOver={() => alert('Mouse Over!')}
+        onMouseOut={() => alert('Mouse Out!')}
         style={{ marginTop: '10px', height: '50px', border: '1px solid black' }}
       >
         Mouse Over & Out here

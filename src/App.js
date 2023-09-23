@@ -14,26 +14,36 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Navigation from './Components/Navigation';
 import Users from './Components/Users';
 import ProtectedRoute from './Components/ProtectedRoute';
+import Counter from './Components/Counter';
+import ParentComponent from './Components/UseCallback';
 
 function App() {
   return (
-    <UserProvider>
-      <Router>
-        <Navigation /> 
-        <Routes>
-          <Route path="/" element={<Login />} />
-          {/* <Route path="/profile" element={<UserProfile />} /> */}
-          <Route path="/profile/*" element={<UserProfile />} />
-          <Route path="/users/*" element={<Users />} />
-          {/* <Route path="/users/*" element={
-            <ProtectedRoute>
-              <Users />
-            </ProtectedRoute>} 
-          /> */}
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Router>
-    </UserProvider>
+
+      // <Counter />
+    <FormEvents />
+    // <UserProvider>
+    //   <Router>
+    //     <Navigation /> 
+    //     <Routes>
+    //       <Route path="/" element={<Login />} />
+    //       {/* <Route path="/profile" element={<UserProfile />} /> */}
+    //       <Route path="/profile/*" element={<UserProfile />} />
+    //       <Route path="/users/*" element={<Users />} />
+    //       {/* <Route path="/users/*" element={
+    //         <ProtectedRoute>
+    //           <Users />
+    //         </ProtectedRoute>} 
+    //       /> */}
+    //       <Route path="*" element={<Navigate to="/" />} />
+    //     </Routes>
+    //   </Router>
+    // </UserProvider>
+    // <UseEffect />
+      // <UserProvider>
+      //   <Login />
+      //   <UserProfile />
+      // </UserProvider>
   );
 }
 
