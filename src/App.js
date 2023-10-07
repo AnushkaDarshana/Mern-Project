@@ -29,22 +29,29 @@ import FormValidation from './Components/FormValidation';
 import Async from './Components/Async';
 import UseNavigate from './Components/UseNavigate';
 import Formik from './Components/Formik';
+import Lazy from './Components/Lazy';
+import Memo from './Components/Memo';
+import UseCallback from './Components/UseCallback';
+import React, { Suspense } from 'react';
+
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Navigation />} />
-    //     <Route path="/counter" element={<Counter />} />
-    //     <Route path="/dashboard" element={<Dashboard />} />
-    //     <Route path="/dashboard/profile" element={<Profile />} />
-    //     <Route path="/posts/:params" element={<Post />} />
-    //     <Route path="*" element={<Error />} />
-
-    //     <Route path="/useNavigate" element={<UseNavigate />} />
-    //   </Routes>
-    // </Router>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+          {/* <Route path="/counter" element={<Counter />} />
+          <Route path="/dashboard/*" element={<Dashboard />} /> */}
+          {/* <Route path="/dashboard/profile" element={<Profile />} /> */}
+          <Route path="/posts/:params" element={<Post />} />
+          <Route path="*" element={<Error />} />
+{/* 
+          <Route path="/useNavigate" element={<UseNavigate />} /> */}
+        </Routes>
+     </Router>
 
     //Protected Routes
 
@@ -63,9 +70,17 @@ function App() {
 
     //Forms
 
+    // <Ref /> 
     // <FormValidation />
     // <Async/>
-    <Formik/>
+    // <Formik/>
+
+    //React.Lazy
+    // <Lazy/>
+
+    //React.Memo
+    // <Memo/>
+
     );
   }
   

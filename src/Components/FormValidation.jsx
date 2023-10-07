@@ -70,7 +70,7 @@ export default function FormValidation() {
         <label>
           Phone Number:
           <input
-            type="tel"
+            type="text"
             name="phone"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
