@@ -30,6 +30,7 @@ import Async from './Components/Async';
 import UseNavigate from './Components/UseNavigate';
 import Formik from './Components/Formik';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyStyles from './Components/MyStyles';
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
     // <FormValidation />
     // <Async/>
     <Formik/>
+    // <MyStyles/>
     );
   }
   

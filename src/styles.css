@@ -1,0 +1,51 @@
+/* style.css */
+.my-component {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: navy;
+  }
+  
+  .button {
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling headings */
+  h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #666;
+  }
+  
+  /* Styling lists */
+  ul {
+    list-style-type: square;
+    margin-left: 30px;
+  }
+  
+  li {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Styling links */
+  a {
+    color: navy;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: darkblue;
+  }
+  
