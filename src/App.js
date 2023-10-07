@@ -36,6 +36,7 @@ import React, { Suspense } from 'react';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyStyles from './Components/MyStyles';
 
 
 function App() {
